@@ -1,0 +1,57 @@
+/* Стили для заголовка */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Стили для формы редактирования */
+.edit {
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Стили для блока просмотра */
+.view {
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+span {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Стили для подвала */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+

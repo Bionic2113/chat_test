@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WebSocket Client</title>
+  <script type="text/javascript" src="/dialog.js" ></script>  
+</head>
+
+<body onload="Init({{.Sender_id}}, {{.Reciever_id}})">
+  <input type="text" id="message" placeholder="Введите сообщение">
+  <button onclick="sendMessage()">Отправить</button>
+  {{$sender_id := .Sender.User_id}}
+  {{$sender_username := .Sender.Username}}
+  
+  {{$reciever_id := .Reciever.User_id}}
+  {{$reciever_username := .Reciever.Username}}
+
+  <table>
+  {{range .Messages}}
+    <tr id={{.Message_id}}>
+      {{if eq .Sender_id $sender_id }}
+      <td style="color: green">{{$sender_username}}</td>
+      {{else}}
+      <td style="color: red">{{$reciever_username}}</td>
+      {{end}}
+      <td>{{.Message}}</td>
+    </tr>
+  {{end}}
+  </table>
+  <div id="sms"></div>
+</body>
+
+</html>
